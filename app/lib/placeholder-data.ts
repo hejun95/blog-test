@@ -7,6 +7,12 @@ const users = [
     email: 'user@nextmail.com',
     password: '123456',
   },
+  {
+    id: '8aff34c2-8b5e-66ce-7a13-9594f567e7ed',
+    name: 'Root',
+    email: 'root@nextmail.com',
+    password: '123456',
+  },
 ];
 
 const customers = [
@@ -144,4 +150,9 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
-export { users, customers, invoices, revenue };
+module.exports = {
+  users,
+  customers,
+  invoices,
+  revenue,
+};
