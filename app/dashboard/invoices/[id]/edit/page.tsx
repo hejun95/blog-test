@@ -4,10 +4,20 @@ import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 
 import { Metadata } from 'next';
- 
+
 export const metadata: Metadata = {
-  title: '修改发票',
+    title: '修改发票',
 };
+
+export async function generateStaticParams() {
+    // 这里你可以根据需要生成静态参数
+    // 例如，从数据库或其他数据源获取 id 列表
+    const ids = ['1', '2', '3']; // 示例数据
+
+    return ids.map((id) => ({
+        id,
+    }));
+}
 
 export default async function Page({ params }: { params: { id: string } }) {
     const id = params.id;
